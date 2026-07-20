@@ -1,0 +1,4 @@
+# 在项目根目录执行（即包含 build.gradle 的目录）
+git init
+git add .
+git commit -m "初版闹钟 APK 源码"
