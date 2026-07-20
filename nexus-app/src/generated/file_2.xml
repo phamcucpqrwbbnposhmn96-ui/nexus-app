@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alarmclock">
+
+    <!-- 允许精确闹钟（Android 12+） -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <!-- 通知权限（Android 13+） -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 震动权限（可选） -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 前台服务权限（用于播放铃声） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <application ...>
+        <!-- 主 Activity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 广播接收器 -->
+        <receiver android:name=".AlarmReceiver"
+            android:exported="false" />
+
+        <!-- 前台服务（用于播放闹铃） -->
+        <service android:name=".AlarmService"
+            android:foregroundServiceType="specialUse"
+            android:exported="false" />
+    </application>
+</manifest>
