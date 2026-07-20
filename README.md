@@ -4,7 +4,7 @@
 
 > 本文档由仓库导出流程根据项目实际文件自动生成，覆盖项目概述、环境要求、架构、安装、构建、使用、贡献与维护等全方位说明，力求达到成熟开源项目的文档标准。
 
-![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-39-blueviolet)
+![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-42-blueviolet)
 
 ## 目录
 
@@ -60,7 +60,7 @@
 
 ## 项目概述
 
-nexus-app 是一个基于 **Java / Maven-Gradle** 构建的 Android 项目，当前仓库共包含 **39** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
+nexus-app 是一个基于 **Java / Maven-Gradle** 构建的 Android 项目，当前仓库共包含 **42** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
 
 本项目旨在提供一套开箱即用、文档完备、易于扩展的实现。无论你是希望直接复用其中的模块，还是想了解其设计与实现思路，都可以在本仓库中找到对应的说明与示例。文档内容会根据仓库中的真实文件自动生成，确保与代码保持同步。
 
@@ -143,9 +143,9 @@ sudo apt install -y python3 python3-pip
 | 类别 | 名称 | 说明 |
 | --- | --- | --- |
 | 主要语言 | XML | 项目核心实现语言 |
-| 语言 | XML | 共 8 个文件 |
-| 语言 | KT | 共 8 个文件 |
-| 语言 | TXT | 共 5 个文件 |
+| 语言 | XML | 共 9 个文件 |
+| 语言 | KT | 共 9 个文件 |
+| 语言 | TXT | 共 6 个文件 |
 | 语言 | GRADLE | 共 3 个文件 |
 | 语言 | TypeScript(React) | 共 2 个文件 |
 | 语言 | JSON | 共 2 个文件 |
@@ -247,7 +247,11 @@ sudo apt install -y python3 python3-pip
 │       │               ├── AndroidManifest.xml
 │       │               ├── file_1.txt
 │       │               └── generated/
-│       │                   └── file_1.txt
+│       │                   ├── AlarmReceiver.kt
+│       │                   ├── AndroidManifest.xml
+│       │                   ├── file_1.txt
+│       │                   └── generated/
+│       │                       └── file_1.txt
 │       ├── main.tsx
 │       └── styles.css
 ├── samples/
@@ -302,6 +306,9 @@ sudo apt install -y python3 python3-pip
 | `nexus-app/src/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
 | `nexus-app/src/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
 | `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
+| `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
 | `generated.apk` | 产物 | 项目文件 |
 
 ## 模块详解
@@ -519,6 +526,24 @@ sudo apt install -y python3 python3-pip
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
 ### `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
