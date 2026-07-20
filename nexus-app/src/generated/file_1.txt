@@ -1,0 +1,11 @@
+app/
+├── java/com/example/alarmclock/
+│   ├── MainActivity.kt          // 主界面（设置闹钟）
+│   ├── AlarmReceiver.kt         // 广播接收器（触发闹钟）
+│   └── AlarmService.kt          // (可选) 后台服务，播放铃声
+├── res/
+│   ├── layout/
+│   │   └── activity_main.xml    // 布局文件
+│   ├── drawable/                // 图标等
+│   └── values/strings.xml
+└── AndroidManifest.xml
