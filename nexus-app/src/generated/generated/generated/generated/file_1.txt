@@ -1,0 +1,7 @@
+app/src/main/java/com/example/alarmclock/
+├── MainActivity.kt
+├── AlarmReceiver.kt
+└── AlarmService.kt
+
+app/src/main/res/layout/activity_main.xml
+app/src/main/AndroidManifest.xml
