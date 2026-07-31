@@ -1,10 +1,10 @@
 # nexus-app
 
-一个基于 Java / Maven-Gradle 的项目。
+一个基于 TXT 的项目。
 
 > 本文档由仓库导出流程根据项目实际文件自动生成，覆盖项目概述、环境要求、架构、安装、构建、使用、贡献与维护等全方位说明，力求达到成熟开源项目的文档标准。
 
-![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-42-blueviolet)
+![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue) ![platform](https://img.shields.io/badge/platform-Android-orange) ![version](https://img.shields.io/badge/version-1.0.0-informational) ![files](https://img.shields.io/badge/files-17-blueviolet)
 
 ## 目录
 
@@ -60,7 +60,7 @@
 
 ## 项目概述
 
-nexus-app 是一个基于 **Java / Maven-Gradle** 构建的 Android 项目，当前仓库共包含 **42** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
+nexus-app 是一个基于 **TXT** 构建的 Android 项目，当前仓库共包含 **17** 个文件。项目遵循清晰的分层结构与约定的工程规范，便于二次开发与长期维护。
 
 本项目旨在提供一套开箱即用、文档完备、易于扩展的实现。无论你是希望直接复用其中的模块，还是想了解其设计与实现思路，都可以在本仓库中找到对应的说明与示例。文档内容会根据仓库中的真实文件自动生成，确保与代码保持同步。
 
@@ -142,23 +142,16 @@ sudo apt install -y python3 python3-pip
 
 | 类别 | 名称 | 说明 |
 | --- | --- | --- |
-| 主要语言 | XML | 项目核心实现语言 |
-| 语言 | XML | 共 9 个文件 |
-| 语言 | KT | 共 9 个文件 |
-| 语言 | TXT | 共 6 个文件 |
-| 语言 | GRADLE | 共 3 个文件 |
+| 主要语言 | TXT | 项目核心实现语言 |
+| 语言 | TXT | 共 5 个文件 |
+| 语言 | TypeScript | 共 3 个文件 |
 | 语言 | TypeScript(React) | 共 2 个文件 |
 | 语言 | JSON | 共 2 个文件 |
-| 语言 | Markdown | 共 2 个文件 |
 | 语言 | CSS | 共 1 个文件 |
+| 语言 | Markdown | 共 1 个文件 |
 | 语言 | Python | 共 1 个文件 |
 | 语言 | JavaScript | 共 1 个文件 |
-| 语言 | BAT | 共 1 个文件 |
-| 语言 | PROPERTIES | 共 1 个文件 |
-| 语言 | YAML | 共 1 个文件 |
-| 语言 | Java | 共 1 个文件 |
 | 语言 | APK | 共 1 个文件 |
-| 框架/平台 | Java / Maven-Gradle | 提供运行时/构建支持 |
 | 构建 | Gradle | 负责编译与打包 |
 
 ## 架构设计
@@ -195,70 +188,26 @@ sudo apt install -y python3 python3-pip
 
 ```
 .
-├── .github/
-│   └── workflows/
-│       └── build.yml
-├── README.md
-├── app/
-│   ├── build.gradle
-│   └── src/
-│       └── main/
-│           ├── AndroidManifest.xml
-│           ├── java/
-│           │   └── com/
-│           │       └── nexus/
-│           │           └── generated/
-│           │               └── MainActivity.java
-│           └── res/
-│               └── values/
-│                   └── strings.xml
-├── build.gradle
-├── generated.apk
-├── gradle/
-│   └── wrapper/
-│       └── gradle-wrapper.properties
-├── gradlew
-├── gradlew.bat
+├── newfile.ts
 ├── nexus-app/
 │   ├── README.md
 │   ├── package.json
 │   └── src/
+│       ├── app.generated.generated.ts
+│       ├── app.generated.ts
 │       ├── app.tsx
-│       ├── generated/
-│       │   ├── AlarmReceiver.kt
-│       │   ├── AndroidManifest.xml
-│       │   ├── file_1.txt
-│       │   ├── file_2.xml
-│       │   ├── file_3.xml
-│       │   ├── file_4.kt
-│       │   ├── file_5.kt
-│       │   ├── file_6.kt
-│       │   ├── file_7.kt
-│       │   └── generated/
-│       │       ├── AlarmReceiver.kt
-│       │       ├── AndroidManifest.xml
-│       │       ├── file_1.txt
-│       │       └── generated/
-│       │           ├── AlarmReceiver.kt
-│       │           ├── AndroidManifest.xml
-│       │           ├── file_1.txt
-│       │           └── generated/
-│       │               ├── AlarmReceiver.kt
-│       │               ├── AndroidManifest.xml
-│       │               ├── file_1.txt
-│       │               └── generated/
-│       │                   ├── AlarmReceiver.kt
-│       │                   ├── AndroidManifest.xml
-│       │                   ├── file_1.txt
-│       │                   └── generated/
-│       │                       └── file_1.txt
 │       ├── main.tsx
 │       └── styles.css
 ├── samples/
 │   ├── data.json
 │   ├── hello.py
 │   └── test.js
-└── settings.gradle
+├── 你好.apk
+├── 你好.generated.generated.generated.generated.generated.txt
+├── 你好.generated.generated.generated.generated.txt
+├── 你好.generated.generated.generated.txt
+├── 你好.generated.generated.txt
+└── 你好.generated.txt
 +-- README.md
 ```
 
@@ -276,40 +225,15 @@ sudo apt install -y python3 python3-pip
 | `samples/hello.py` | 源码 | Python 脚本 |
 | `samples/data.json` | 配置 | JSON 数据/配置 |
 | `samples/test.js` | 测试 | 源代码 |
-| `nexus-app/src/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/file_2.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/file_3.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/file_4.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/file_5.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/file_6.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/file_7.kt` | 源码 | 项目文件 |
-| `README.md` | 源码 | 项目说明文档 |
-| `nexus-app/src/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
-| `build.gradle` | 配置 | 项目文件 |
-| `settings.gradle` | 配置 | 项目文件 |
-| `app/build.gradle` | 配置 | 项目文件 |
-| `app/src/main/AndroidManifest.xml` | 配置 | 项目文件 |
-| `app/src/main/res/values/strings.xml` | 配置 | 项目文件 |
-| `gradlew` | 源码 | 项目文件 |
-| `gradlew.bat` | 源码 | 项目文件 |
-| `gradle/wrapper/gradle-wrapper.properties` | 配置 | 项目文件 |
-| `.github/workflows/build.yml` | 配置 | 项目文件 |
-| `app/src/main/java/com/nexus/generated/MainActivity.java` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt` | 源码 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml` | 配置 | 项目文件 |
-| `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt` | 源码 | 项目文件 |
-| `generated.apk` | 产物 | 项目文件 |
+| `nexus-app/src/app.generated.ts` | 源码 | 源代码 |
+| `nexus-app/src/app.generated.generated.ts` | 源码 | 源代码 |
+| `newfile.ts` | 源码 | 源代码 |
+| `你好.apk` | 产物 | 项目文件 |
+| `你好.generated.txt` | 源码 | 项目文件 |
+| `你好.generated.generated.txt` | 源码 | 项目文件 |
+| `你好.generated.generated.generated.txt` | 源码 | 项目文件 |
+| `你好.generated.generated.generated.generated.txt` | 源码 | 项目文件 |
+| `你好.generated.generated.generated.generated.generated.txt` | 源码 | 项目文件 |
 
 ## 模块详解
 
@@ -357,202 +281,58 @@ sudo apt install -y python3 python3-pip
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/file_1.txt`
+### `nexus-app/src/app.generated.ts`
 
-- **类别**：项目文件。
+- **类别**：源代码。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/file_2.xml`
+### `nexus-app/src/app.generated.generated.ts`
 
-- **类别**：项目文件。
+- **类别**：源代码。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/file_3.xml`
+### `newfile.ts`
 
-- **类别**：项目文件。
+- **类别**：源代码。
 - **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
-### `nexus-app/src/generated/file_4.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/file_5.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/file_6.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/file_7.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/file_1.txt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `build.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `settings.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/build.gradle`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/src/main/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/src/main/res/values/strings.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `gradlew`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `gradlew.bat`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `gradle/wrapper/gradle-wrapper.properties`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `.github/workflows/build.yml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `app/src/main/java/com/nexus/generated/MainActivity.java`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/file_1.txt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/file_1.txt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/generated/file_1.txt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/generated/generated/file_1.txt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/generated/AndroidManifest.xml`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `nexus-app/src/generated/generated/generated/generated/generated/AlarmReceiver.kt`
-
-- **类别**：项目文件。
-- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
-- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
-
-### `generated.apk`
+### `你好.apk`
 
 - **类别**：项目文件。
 - **作用**：该文件参与项目的构建产物交付，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `你好.generated.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `你好.generated.generated.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `你好.generated.generated.generated.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `你好.generated.generated.generated.generated.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
+- **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
+
+### `你好.generated.generated.generated.generated.generated.txt`
+
+- **类别**：项目文件。
+- **作用**：该文件参与项目的功能实现或配置，是仓库完整性的组成部分。
 - **维护建议**：修改后请同步更新本文档对应说明，并保持命名与目录约定一致。
 
 ## 安装
@@ -1013,7 +793,7 @@ Android 项目请在 `build.gradle` 中引用环境变量配置签名，密钥�
 
 本仓库采用 [Keep a Changelog](https://keepachangelog.com/) 规范，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
-### [1.0.0] - 2026-07-20
+### [1.0.0] - 2026-07-31
 
 #### 新增
 - 初始版本发布
@@ -1074,7 +854,7 @@ of the Software, and to permit persons to whom the Software is furnished to do s
 
 ---
 
-_最后更新：2026-07-20_
+_最后更新：2026-07-31_
 
 ## 项目状态
 
@@ -1136,21 +916,6 @@ Authorization: Bearer <token>
 ### `samples/`
 
 - 职责：承载与「samples」相关的文件，保持内聚。
-- 维护建议：新增此类文件时统一放入该目录，避免散落。
-
-### `app/`
-
-- 职责：承载与「app」相关的文件，保持内聚。
-- 维护建议：新增此类文件时统一放入该目录，避免散落。
-
-### `gradle/`
-
-- 职责：承载与「gradle」相关的文件，保持内聚。
-- 维护建议：新增此类文件时统一放入该目录，避免散落。
-
-### `.github/`
-
-- 职责：承载与「.github」相关的文件，保持内聚。
 - 维护建议：新增此类文件时统一放入该目录，避免散落。
 
 ## 依赖说明
