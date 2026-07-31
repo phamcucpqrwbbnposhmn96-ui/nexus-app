@@ -1,0 +1,8 @@
+app/
+├── src/main/
+│   ├── java/com/example/welcome/
+│   │   └── MainActivity.kt
+│   ├── res/layout/
+│   │   └── activity_main.xml
+│   └── AndroidManifest.xml
+└── build.gradle (Module: app)
